@@ -1,0 +1,26 @@
+@startuml
+!define RECTANGLE class
+RECTANGLE EKS
+RECTANGLE ALB
+RECTANGLE RDS
+RECTANGLE Redis
+RECTANGLE AmazonMQ
+RECTANGLE AppMesh
+RECTANGLE AnalyticsService
+RECTANGLE MerchantOnboardingService
+RECTANGLE NotificationService
+RECTANGLE PaymentProcessingService
+RECTANGLE UserManagementService
+RECTANGLE WalletService
+EKS --> ALB
+EKS --> RDS
+EKS --> Redis
+EKS --> AmazonMQ
+EKS --> AppMesh
+EKS --> AnalyticsService
+EKS --> MerchantOnboardingService
+EKS --> NotificationService
+EKS --> PaymentProcessingService
+EKS --> UserManagementService
+EKS --> WalletService
+@enduml
