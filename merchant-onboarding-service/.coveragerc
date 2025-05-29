@@ -1,0 +1,4 @@
+[run]
+branch = True
+source = merchant-onboarding-service
+omit = */tests/*

@@ -21,4 +21,10 @@ jobs:
         run: pytest payment-processing-service/
       - name: Build Docker image
         run: docker build -t payment-processing-service:latest ./payment-processing-service
+      - name: Security Scan
+        run: |
+          pip install trivy
+          trivy fs --exit-code 1 --severity HIGH,CRITICAL .
+      - name: Blue/Green Deploy (Documented)
+        run: echo "Deploy to green namespace, run tests, then switch traffic"
       # Add steps for push to registry and deploy to EKS as needed

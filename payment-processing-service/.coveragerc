@@ -1,0 +1,4 @@
+[run]
+branch = True
+source = payment-processing-service
+omit = */tests/*

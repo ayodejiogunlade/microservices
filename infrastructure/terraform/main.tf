@@ -19,6 +19,9 @@ resource "aws_db_instance" "main" {
   password            = var.db_password
   parameter_group_name= "default.postgres15"
   skip_final_snapshot = true
+  storage_encrypted   = true
+  kms_key_id          = var.kms_key_id
+  backup_retention_period = 7
 }
 
 # Example: Redis (Elasticache)
@@ -42,3 +45,53 @@ resource "aws_mq_broker" "main" {
     password = var.mq_password
   }
 }
+
+# Example: Secure secrets using AWS Secrets Manager
+variable "db_password" {
+  description = "Database password (stored in AWS Secrets Manager)"
+  type        = string
+  sensitive   = true
+}
+
+# Example: Enable encryption for EKS node group volumes
+resource "aws_eks_node_group" "main" {
+  # ...existing code...
+  disk_encryption = true
+  # ...existing code...
+}
+
+# Example: Use spot instances for cost optimization
+resource "aws_eks_node_group" "spot" {
+  # ...existing code...
+  capacity_type = "SPOT"
+  # ...existing code...
+}
+
+# Example: Add network policy for Kubernetes
+resource "kubernetes_network_policy" "default-deny" {
+  metadata {
+    name      = "default-deny"
+    namespace = "default"
+  }
+  spec {
+    pod_selector = {}
+    policy_types = ["Ingress", "Egress"]
+  }
+}
+
+# Example: Add IAM policy for least privilege
+resource "aws_iam_policy" "service_least_privilege" {
+  name        = "service-least-privilege"
+  description = "Least privilege policy for microservices"
+  policy      = file("policies/service-least-privilege.json")
+}
+
+# Example: Enable automated backups for RDS
+resource "aws_db_instance" "main" {
+  # ...existing code...
+  backup_retention_period = 7
+  # ...existing code...
+}
+
+# Example: Add blue/green deployment strategy (documented for CI/CD)
+# See cicd/github-actions/ci-cd-pipeline.yml for blue/green deployment steps

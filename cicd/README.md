@@ -42,6 +42,20 @@ jobs:
 - Integrated with AWS CloudWatch and Prometheus for monitoring
 - Automated rollback on failed deployments
 
+## Blue/Green Deployment Example
+- Use separate blue and green namespaces in Kubernetes
+- Deploy new version to green, run tests, then switch traffic
+- Rollback by switching traffic back to blue
+
+## Canary Deployment Example
+- Use weighted routing in ALB or Istio
+- Gradually increase traffic to new version
+- Rollback if error rate increases
+
+## Security Scanning
+- Use Trivy or Snyk to scan Docker images for vulnerabilities
+- Run scans in CI/CD pipeline
+
 ## See Also
 - [`../docs/operations-runbook.md`](../docs/operations-runbook.md)
 - [`../docs/security-compliance.md`](../docs/security-compliance.md)
