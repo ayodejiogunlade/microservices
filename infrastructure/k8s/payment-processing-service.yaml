@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-processing-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: payment-processing-service
+  template:
+    metadata:
+      labels:
+        app: payment-processing-service
+    spec:
+      containers:
+      - name: payment-processing-service
+        image: payment-processing-service:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-processing-service
+spec:
+  type: ClusterIP
+  selector:
+    app: payment-processing-service
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
