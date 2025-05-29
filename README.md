@@ -2,11 +2,11 @@
 
 A modern, cloud-native microservices platform for payment processing, merchant onboarding, analytics, notifications, user management, and wallet services—built for scalability, security, and rapid innovation.
 
-[Live Demo](https://demo.techflowsolutions.com) | [Deployed App](https://app.techflowsolutions.com)
+[Static Frontend](https://ayodejiogunlade.netlify.app/)
+[GitHub Repo](https://github.com/ayodejiogunlade/microservices)
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/your-org/microservices/ci.yml?branch=main)
-![Version](https://img.shields.io/github/v/release/your-org/microservices)
-![License](https://img.shields.io/github/license/your-org/microservices)
+![Build Status](https://img.shields.io/github/actions/workflow/status/ayodejiogunlade/microservices/ci.yml?branch=main)
+![License](https://img.shields.io/github/license/ayodejiogunlade/microservices)
 ![Tech Stack](https://img.shields.io/badge/tech-AWS%2C%20Python%2C%20Docker%2C%20EKS%2C%20RDS%2C%20Redis%2C%20AmazonMQ-blue)
 
 ---
@@ -38,7 +38,7 @@ See [`docs/infrastructure-diagram.puml`](docs/infrastructure-diagram.puml) for t
 ### Installation
 ```powershell
 # Clone the repo
- git clone https://github.com/your-org/microservices.git
+ git clone https://github.com/ayodejiogunlade/microservices.git
  cd microservices
 
 # Build and run all services (example for PowerShell)
@@ -65,7 +65,7 @@ See each service's README for required environment variables and configuration.
 
 - **Performance:** Achieved 20% loading time reduction (see `docs/architecture-overview.md`)
 - **Screenshots:** ![App Screenshot](docs/screenshots/app-demo.png)
-- **Mobile-First:** Fully responsive UI (see demo)
+- **Mobile-First:** Fully responsive UI see demo: https://ayodejiogunlade.netlify.app/
 - **AWS Integration:** Deep integration with EKS, RDS, Redis, AmazonMQ, AppMesh
 
 ---
@@ -92,8 +92,8 @@ See each service's README for required environment variables and configuration.
 
 - **Contributing:** See [CONTRIBUTING.md](CONTRIBUTING.md)
 - **License:** MIT (see [LICENSE](LICENSE))
-- **Contact:** [Your LinkedIn](https://linkedin.com/in/your-profile)
-- **Acknowledgments:** AWS, Open Source contributors
+- **Contact:** [Ayodeji Ogunlade](https://www.linkedin.com/in/ayodeji-ogunlade/)
+- **Acknowledgments:** AWS
 
 ---
 
