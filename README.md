@@ -53,8 +53,7 @@ docker run -d -p 8001:8080 --name payment-processing-service payment-processing-
 Invoke-RestMethod -Uri http://localhost:8001/payments -Method POST -Body '{"amount":100, "currency":"USD"}' -ContentType 'application/json'
 ```
 
-### API Documentation
-Each service exposes its own OpenAPI/Swagger docs at `/docs` (e.g., http://localhost:8001/docs).
+
 
 ### Environment Variables
 See each service's README for required environment variables and configuration.
