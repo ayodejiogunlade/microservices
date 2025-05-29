@@ -2,7 +2,7 @@
 
 A modern, cloud-native microservices platform for payment processing, merchant onboarding, analytics, notifications, user management, and wallet services—built for scalability, security, and rapid innovation.
 
-[Static Frontend](https://ayodejiogunlade.netlify.app/)
+[Static Frontend](https://ayodejiogunlade.netlify.app/techflow-dashboard/techflow-dashboard)
 [GitHub Repo](https://github.com/ayodejiogunlade/microservices)
 
 ![Build Status](https://img.shields.io/github/actions/workflow/status/ayodejiogunlade/microservices/ci.yml?branch=main)
@@ -71,7 +71,7 @@ See each service's README for required environment variables and configuration.
 - **Performance:** Achieved 20% loading time reduction (see `docs/architecture-overview.md`)
 - **Screenshots:** ![App Screenshot](docs/screenshots/app-demo.png)
 - **Screenshots:** ![Architecture Diagram](docs/screenshots/architecture-diagram.png)
-- **Mobile-First:** Fully responsive UI ([demo](https://ayodejiogunlade.netlify.app/))
+- **Mobile-First:** Fully responsive UI ([demo](https://ayodejiogunlade.netlify.app/techflow-dashboard/techflow-dashboard))
 - **AWS Integration:** Deep integration with EKS, RDS, Redis, AmazonMQ, AppMesh
 - **Security:** PCI DSS, mTLS, secrets management, vulnerability scanning
 - **CI/CD:** Blue/green, canary, automated rollback
